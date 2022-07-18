@@ -12,7 +12,7 @@ flags = tf.app.flags # Pass the parameters
 # ** == we can change for the model
 
 # Default parameters
-flags.DEFINE_integer("train_epoch", 30, "Epoch to train")
+flags.DEFINE_integer("train_epoch", 1, "Epoch to train")
 flags.DEFINE_integer("dim_unigram", 71, "Dimension of input, 71 or 82") # Own data or RNN data
 flags.DEFINE_integer("dim_bigram", 1055, "Dimension of input, 1055 or 1876")
 flags.DEFINE_integer("dim_trigram", 11327, "Dimension of input, 11327 or 14767") 
@@ -29,7 +29,7 @@ flags.DEFINE_float("decay_rate", 0.09, "Decay rate of learning rate")
 flags.DEFINE_float("decay_step", 100, "Decay step of learning rate")
 
 # Validation hyper parameters
-flags.DEFINE_integer("valid_iteration", 250, "Number of validation iteration.")
+flags.DEFINE_integer("valid_iteration", 1, "Number of validation iteration.")
 flags.DEFINE_integer("dim_rnn_cell", 200, "Dimension of RNN cell") # ** (200, 1) or (200, 1 * dim_embed_gram)
 flags.DEFINE_integer("dim_rnn_cell_min", 200, "Minimum dimension of RNN cell")
 flags.DEFINE_integer("dim_rnn_cell_max", 399, "Maximum dimension of RNN cell")
@@ -58,13 +58,13 @@ flags.DEFINE_float("hidden_dropout", 0.5, "Dropout rate of hidden layer")
 flags.DEFINE_float("hidden_dropout_min", 0.3, "Minimum dropout rate of hidden layer")
 flags.DEFINE_float("hidden_dropout_max", 0.8, "Maximum dropout rate of hidden layer")
 
-flags.DEFINE_float("learning_rate", 0.0035, "Learning rate of the optimzier") # ** IMPORTANT; Origin value is 0.01
+flags.DEFINE_float("learning_rate", 0.0002, "Learning rate of the optimzier") # ** IMPORTANT; Origin value is 0.01
 flags.DEFINE_float("learning_rate_min", 5e-3, "Minimum learning rate of the optimzier")
 flags.DEFINE_float("learning_rate_max", 5e-2, "Maximum learning rate of the optimzier")
 
 # Model settings
 flags.DEFINE_boolean("default_params", True, "True to use default params")
-flags.DEFINE_boolean("ensemble", True, "True to use ensemble ngram") # ** 
+flags.DEFINE_boolean("ensemble", True, "True to use ensemble ngram") # **
 flags.DEFINE_boolean("embed", True, "True to use embedding table")
 
 flags.DEFINE_boolean("embed_trainable", False, "True to use embedding table") # ** Turn to True if nothing changes when changing the learning rate; Origin value is False
