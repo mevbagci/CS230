@@ -12,7 +12,7 @@ flags = tf.app.flags # Pass the parameters
 # ** == we can change for the model
 
 # Default parameters
-flags.DEFINE_integer("train_epoch", 3000, "Epoch to train")
+flags.DEFINE_integer("train_epoch", 30, "Epoch to train")
 flags.DEFINE_integer("dim_unigram", 71, "Dimension of input, 71 or 82") # Own data or RNN data
 flags.DEFINE_integer("dim_bigram", 1055, "Dimension of input, 1055 or 1876")
 flags.DEFINE_integer("dim_trigram", 11327, "Dimension of input, 11327 or 14767") 
@@ -25,7 +25,7 @@ flags.DEFINE_integer("max_grad", 5, "Maximum gradient to clip")
 flags.DEFINE_integer("batch_size", 1024, "Size of batch") # IMPORTANT; the bigger the better
 
 flags.DEFINE_integer("ngram", 4, "Ngram feature when ensemble = False.")
-flags.DEFINE_float("decay_rate", 0.99, "Decay rate of learning rate")
+flags.DEFINE_float("decay_rate", 0.09, "Decay rate of learning rate")
 flags.DEFINE_float("decay_step", 100, "Decay step of learning rate")
 
 # Validation hyper parameters
@@ -58,7 +58,7 @@ flags.DEFINE_float("hidden_dropout", 0.5, "Dropout rate of hidden layer")
 flags.DEFINE_float("hidden_dropout_min", 0.3, "Minimum dropout rate of hidden layer")
 flags.DEFINE_float("hidden_dropout_max", 0.8, "Maximum dropout rate of hidden layer")
 
-flags.DEFINE_float("learning_rate", 0.002, "Learning rate of the optimzier") # ** IMPORTANT; Origin value is 0.01
+flags.DEFINE_float("learning_rate", 0.0035, "Learning rate of the optimzier") # ** IMPORTANT; Origin value is 0.01
 flags.DEFINE_float("learning_rate_min", 5e-3, "Minimum learning rate of the optimzier")
 flags.DEFINE_float("learning_rate_max", 5e-2, "Maximum learning rate of the optimzier")
 
