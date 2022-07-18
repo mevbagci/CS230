@@ -1,0 +1,3 @@
+ensemble_embedding
+[dim_hidden, dim_rnn_cell, learning_rate, lstm_dropout, lstm_layer, hidden_dropout, dim_embed]
+combination	top1	top5	epoch
