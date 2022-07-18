@@ -193,7 +193,7 @@ class RNN(object):
         elif self.ngram == 4:
             total_logits = fourgram_logits
         else:
-            assert False, 'No specific ngram %d'% ngram
+            assert False, 'No specific ngram %d'% self.ngram
 
 
         hidden1 = linear(inputs=total_logits, 
@@ -235,8 +235,8 @@ class RNN(object):
         tf.reset_default_graph()
 
     #tf2
-    def reset_graph():
-        tf.compat.v1.reset_default_graph()
+    # def reset_graph():
+    #     tf.compat.v1.reset_default_graph()
 
     def save(self, checkpoint_dir, step):
         file_name = "%s.model" % self.model_name
