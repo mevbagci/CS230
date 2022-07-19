@@ -64,7 +64,7 @@ flags.DEFINE_float("learning_rate_max", 5e-2, "Maximum learning rate of the opti
 
 # Model settings
 flags.DEFINE_boolean("default_params", True, "True to use default params")
-flags.DEFINE_boolean("ensemble", True, "True to use ensemble ngram") # **
+flags.DEFINE_boolean("ensemble", False, "True to use ensemble ngram") # **
 flags.DEFINE_boolean("embed", True, "True to use embedding table")
 
 flags.DEFINE_boolean("embed_trainable", False, "True to use embedding table") # ** Turn to True if nothing changes when changing the learning rate; Origin value is False
