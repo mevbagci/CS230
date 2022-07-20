@@ -12,7 +12,7 @@ flags = tf.app.flags # Pass the parameters
 # ** == we can change for the model
 
 # Default parameters
-flags.DEFINE_integer("train_epoch", 60, "Epoch to train")
+flags.DEFINE_integer("train_epoch", 100, "Epoch to train")
 flags.DEFINE_integer("dim_unigram", 71, "Dimension of input, 71 or 82") # Own data or RNN data
 flags.DEFINE_integer("dim_bigram", 1055, "Dimension of input, 1055 or 1876")
 flags.DEFINE_integer("dim_trigram", 11327, "Dimension of input, 11327 or 14767") 
