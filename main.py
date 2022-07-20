@@ -25,7 +25,7 @@ flags.DEFINE_integer("min_grad", -5, "Minimum gradient to clip")
 flags.DEFINE_integer("max_grad", 5, "Maximum gradient to clip")
 flags.DEFINE_integer("batch_size", 1000, "Size of batch") # Origin value is 300, now change to optimal
 
-flags.DEFINE_integer("ngram", 3, "Ngram feature when ensemble = False.") # *** 
+flags.DEFINE_integer("ngram", 2, "Ngram feature when ensemble = False.") # ***
 
 flags.DEFINE_float("decay_rate", 0.99, "Decay rate of learning rate")
 flags.DEFINE_float("decay_step", 100, "Decay step of learning rate")
