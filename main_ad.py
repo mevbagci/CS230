@@ -29,7 +29,7 @@ flags.DEFINE_float("decay_rate", 0.99, "Decay rate of learning rate")
 flags.DEFINE_float("decay_step", 100, "Decay step of learning rate")
 
 # Validation hyper parameters
-flags.DEFINE_integer("valid_iteration", 1, "Number of validation iteration.")
+flags.DEFINE_integer("valid_iteration", 2, "Number of validation iteration.")
 flags.DEFINE_integer("dim_rnn_cell", 200, "Dimension of RNN cell") # ** (200, 1) or (200, 1 * dim_embed_gram)
 flags.DEFINE_integer("dim_rnn_cell_min", 200, "Minimum dimension of RNN cell")
 flags.DEFINE_integer("dim_rnn_cell_max", 399, "Maximum dimension of RNN cell")
